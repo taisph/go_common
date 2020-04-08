@@ -3,7 +3,7 @@ package flag
 import (
 	"gopkg.in/alecthomas/kingpin.v2"
 
-	"github.com/taisph/go-common/pkg/log"
+	"github.com/taisph/go_common/pkg/log"
 )
 
 func AddFlags(app *kingpin.Application, cfg *log.Config) {
