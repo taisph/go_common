@@ -1,4 +1,4 @@
-module github.com/taisph/go-common
+module github.com/taisph/go_common
 
 go 1.14
 
