@@ -8,7 +8,7 @@ import (
 )
 
 type LogCliConfig struct {
-	Format CheckedFormat `name:"format" help:"Output format of log messages. One of: [console, json]" default:"console" env:"LOG_FORMAT"`
+	Format CheckedFormat `name:"format" help:"Output format of log messages. One of: [console, json, json-sd]" default:"console" env:"LOG_FORMAT"`
 	Level  CheckedLevel  `name:"level" help:"Only log messages with the given severity or above. One of: [trace, debug, info, warn, error, fatal, panic]" default:"info" env:"LOG_LEVEL"`
 }
 
@@ -38,7 +38,7 @@ func (f *CheckedFormat) String() string {
 
 func (f *CheckedFormat) Set(s string) error {
 	switch s {
-	case "console", "json":
+	case "console", "json", "json-sd":
 		f.s = s
 	default:
 		return fmt.Errorf("unrecognized log format: %q", s)

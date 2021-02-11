@@ -1,4 +1,4 @@
-package commonlog
+package stackdriver
 
 import (
 	"runtime"
